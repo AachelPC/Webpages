@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+
+        <title>Artificial intelligence in cybersecurity  </title>
+        
+
+        <link rel="stylesheet" href="base.css">
+
+        <script>
+           //code to get website theme from saved  local storage
+           document.addEventListener('DOMContentLoaded', function() {
+            var theme_save = localStorage.getItem('page_theme');
+            if(theme_save){
+              document.body.classList.add(theme_save);
+
+            }
+            
+           });
+
+           //code to  switch theme by clicking a buttonm                               
+            function theme_toggle() {
+                var element = document.body;
+                element.classList.toggle("dark-mode");
+                //saving preferred theme in local storage 
+                var present_theme = element.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode';
+                localStorage.setItem('page_theme',present_theme);
+                       }
+
+            //code to display image , image soruce , image description and its reference.
+            function show(image_src,img_photo,img_description,ref_link){
+
+                var show_img =  document.getElementById('image');
+                var show_photo = document.getElementById('photo_name');
+                var show_description =  document.getElementById('description');
+                var show_ref_link = document.getElementById('refer');
+
+                show_img.src = image_src;
+                show_photo.textContent = img_photo;
+                show_description.textContent = img_description;
+                show_ref_link.innerHTML = `<a href = "${ref_link}" target="_blank"> ${ref_link}</a>`;
+              
+              }
+         //code to greet the user when they type their name in text box 
+            function show_username(){
+                            const queryString = window.location.search;
+                            const User_name = new URLSearchParams(queryString).get("User_name");
+                            
+                            if(User_name){
+                                document.body.innerHTML = "<h1> Hello " + User_name +"<h1>";
+                                document.textContent = "Hello " + User_name;
+            
+                            }
+ 
+                        }
+          // code to enter the name in textbox and save the name in localstorage
+            function enter_name(){
+                           const User_name = document.getElementById('nameID').value;
+                           window.location.search = "?User_name" + User_name;
+                           localStorage.setItem('save_name',User_name);
+
+
+                        }
+          //code to display live data and time
+            function show_date_time() {
+
+                          const datetimeElement = document.getElementById("time");
+                          const current_date = new Date();
+
+                          datetimeElement.textContent = current_date;
+
+                        }
+
+                          window.onload = function() {
+                          show_date_time();
+                        };
+                        
+    </script>
+  </head>
+  
+  <body>
+    
+    <script>
+      // code to load user's name in website 
+      var name_greeting =  document.getElementById("name_heading");
+      name_greeting.onload = show_username(); 
+  </script> 
+    
+
+    <header>
+        <!--button to change theme-->
+        <button onclick="theme_toggle()">Change Theme</button>
+        <p></p>
+        <!--heading of the website-->
+        <h1 id ="main_head">Artificial intelligence in Cybersecurity</h1>
+        
+
+    </header>
+    
+    
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>      
+            <li><a href="#">Our team</a></li>    
+            <li><a href="#">Projects</a></li>      
+            <li><a href="#">Contact</a></li>     
+         </ul> 
+
+          <!--display user_name -->
+          <div class="container">
+           <h1 id ="name_heading"> </h1>
+           <!--button where the user types thier name-->
+           <form id = "formname">
+          <input type="text" id="nameID" name="User_name" placeholder="Enter your name!">  
+                        <button onclick="enter_name()">Apply!</button>
+            </form>
+            </div>
+            <!--displays live time-->
+            <div id="date_time">
+              <h3 id ="time"></h3>
+            </div>
+ 
+    </nav>
+
+
+    <main>
+
+         <div>
+          <!--displays the figure one-->
+            <p></p>
+            <img src="https://media.istockphoto.com/id/1380392283/photo/cybersecurity-cybercrime-internet-scam-business-cyber-security-platform-privacy-protection-3d.jpg?s=1024x1024&w=is&k=20&c=B0aZf9E5adQAQi7VsSS4jyvq1wBfQyTu2f3dVfKB-zU="height="300" width="440"title="AI and CS" />
+            <p></p>
+            <a href ='https://www.shutterstock.com/search/robot-antivirus'> Click here to go to source of the image above</a>
+            <p id="p0">Artificial Intelligence saves organizations’ lots of time and resources by strengthening their protection from cyber-crime like malicious attacks such as ransomware, Phishing, Cyber espionage and more.
+            </p>
+          </div>
+         <!--text content of the website -->
+        <article>
+            <h2 id ="article_h">Artificial Intelligence of Cybersecurity </h2>
+            <p id ="p1"> There is constant advancements in the technology, so cyber criminals adjust thier cyber attcks to current technology.For example social engineering , it is cyber-attack where cyber-criminals deceive the user to enter thier personal information(i.e password,bank deails, etc.). Another example is phishing a type of social engineering in which the user's sensitive data is revealed without them being aware of it .Phising can be messages from a unknown person or email ,suspicious website or link . Artificial intelligence can be used to detect and prevent these crime . AI detects abnormalities by anaylsing the context and content of the data and concludes wheather it is a scam or a genuine email .</p>
+           
+            <h3 id ="sub_h">Pros of Artificial Intelligence of Cybersecurity</h3>  
+          
+            <p id="p2">Artificial intelligence has proven to benefit cybersecurity by 
+            <ul>
+               <li id ="points">Giving faster response to cyber-attacks</li>
+               <li id ="points">Anaylse data in real-time</li>
+               <li id="points">Can predict cyber-attack by processing old data</li>
+               
+              </ul>
+            </p>  
+         
+            <p id="p3"></p>   
+        
+            <h3 id = "sub_h">Cons of Artificial Intelligence of Cybersecurity </h3>  
+     
+            <p id="p4">Despite AI being so compatible to cybersecurity Artificial intelligence in Cybersecurity has its limitations which are:</p>
+            <ul>
+              <li id="points"> Artificial Intelligence lacks transparency</li>
+              <li id="points"> Artificial Intelligence causes privacy concerns</li>
+              <li id="points"> AI is has high production cost.</li>
+            </ul>  
+            
+            <h3 id="sub_h"> Application of Artificail intelligence in cybersecurity</h4>
+            <p id="p5">There are many application in AI that has made it so useful and which aids it to protect data .Some of the applications are :</p>
+            <ul>
+              <li id="points">Machine learning</li>
+              <li id="points">Intelligence agents</li>
+              <li id="points">Security expert systerms</li>
+            </ul>    
+           
+            <body>
+
+        
+              <div>
+                <!-- buttons to show images, image despriction, source and source link-->
+                <main>
+                 
+                <h3 id =" image_heading"><i>Click on the buttons to see various image of AI -in-Cybersecurity:</i></h3>
+              
+               <img id="image" src="  height= "300" width="440 " alt="">
+               <p id="photo_name"></p>
+               <p id="description"></p>
+               <p id="refer"></p> 
+        
+               <table>
+                <tr>
+                  <td><button onclick ="show('https://socradar.io/wp-content/uploads/2022/01/AI-in-CyberSecurity.jpeg','Source: Data Flair','The image shows advantages of AI in cybersecurity image referernce:','https://socradar.io/using-artificial-intelligence-in-cybersecurity-ultimate-guide/')" style="height:40px;width:100px">AI Advantages</button></td>
+                  <td><button onclick ="show('https://www.nwkings.com/wp-content/uploads/2023/09/MicrosoftTeams-image-18-768x512.jpg', 'Photographer: unknown','The image shows Disadvantages of AI in cybersecurity image referernce:','https://www.nwkings.com/ai-in-cybersecurity')"style="height:40px;width:100px">AI Disadvantages</button> </td>
+                  <td><button onclick ="show('https://www.fsm.ac.in/blog/wp-content/uploads/2022/08/ml-e1610553826718.jpg', 'Photographer:  Istvan Jonyer ',' This image shows machine learning image referernce:','https://sidespingroup.com/machine-learning-expert-how-to-for-executives/')" style="height:40px;width:100px">Machine Learning</button> </td>
+                  <td><button onclick ="show('https://dd80b675424c132b90b3-e48385e382d2e5d17821a5e1d8e4c86b.ssl.cf1.rackcdn.com/files/images_articles/3230-image.png', 'Source: Bijender Mishra',' This image shows applications of AI used in Cybersecurity image referernce:','https://www.bankinfosecurity.asia/blogs/new-role-artificial-intelligence-in-cybersecurity-p-3230')" style="height:40px;width:100px">Applications of AI</button> </td>
+                  <td><button onclick ="show('https://www.wipro.com/content/dam/nexus/en/service-lines/applications/infographics/eliminating-the-complexity-in-cybersecurity-with-artificial-intelligence.png','Source: Gleb-David Rochenovich','This image shows the future of AI image referernce:','https://www.researchgate.net/figure/Figure-Changing-Cybersecuritys-Future-with-an-AI-Driven-Approach_fig3_370594967')" style="height:40px;width:100px">The Future of AI</button> </td>
+                  
+                </tr>
+              </table>
+               <div>
+           <!-- conclusion of article-->
+            <h3 id="sub_h">Conclusion:</h4>
+            <p id="p5">Artificail intelligence is always improving and it can be used in many fields of study ,Artificail Intelligence in cybersecurity has improved protect of data and management of data . Artificail intelligence makes desicion by processing data to produce accurate information and decision,thses data can be trampered so cybersecurity powered by Artificail intelligence is needed to be make a strong barrier.  </p>
+      
+          </article>  
+     
+
+
+    </main>
+    
+  </head>
+   
+
+    </div>
+ <!-- links to related articles-->
+    <h2>Related</h2>
+       
+        <ul>     
+            <li><a href="https://www.forbes.com/sites/forbestechcouncil/2023/03/15/how-ai-is-disrupting-and-transforming-the-cybersecurity-landscape/?sh=1eb712be4683">How AI Is Disrupting And Transforming The Cybersecurity Landscape.</a></li> 
+            <li><a href="https://www.ibm.com/ai-cybersecurity">Artificial intelligence (AI) cybersecurity</a></li>  
+            <li><a href="https://blog.hubspot.com/marketing/ai-cybersecurity">Everything You Need to Know About AI Cybersecurity</a></li>      
+            <li><a href="https://www.balbix.com/insights/artificial-intelligence-in-cybersecurity/">Using Artificial Intelligence in Cybersecurityg</a></li>       
+            <li><a href="https://www.checkpoint.com/cyber-hub/cyber-security/what-is-ai-cyber-security/">Artificial Intelligence (AI) Cyber Security</a></li>    
+      
+     
+    </main>
+    <!--closing of website-->
+ <footer>    
+    <p>©Copyright 2050 by nobody. All rights reversed.</p>  
+    </footer> 
+   </body>
+  </html>
+
+
+    </div>
+
+    </body>
+</html>

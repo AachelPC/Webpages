@@ -1,0 +1,133 @@
+@import "base.css";  @import url("base.css");
+
+/*create color palettes*/
+:root {
+    --primary-color: rgb(126, 25, 25);
+    --secondary-color: rgb(0,0,0);
+    --bg-color: rgb(0,0,0);
+    --font-color: rgb(0,0,0);
+    --heading-color: rgb(0,0,0);
+}
+
+/*colour and font of heading h1*/
+h1{
+    padding: 0;
+    margin: 0 0 0.5em 0;
+    color: rgb(151, 7, 122);
+    font: 1.5em/1.33 Verdana, sans-serif;
+ }
+ /*colour and font of heading 2*/
+ h2{
+    
+    padding: 0;
+    margin: 0 0 0.5em 0;
+    color: rgb(19, 126, 55);
+    font: 1.0em/1.33 Verdana, sans-serif;
+
+ }
+ /*colour and font of heading h3*/
+ h3{
+    
+    padding: 0;
+    margin: 0 0 0.5em 0;
+    color: rgb(155, 72, 72);
+    font: 1.5em/1.33 Garamond, serif;
+
+ }
+ /*colour and font of live time*/
+ #time{
+
+    padding: 0;
+    margin: 0 0 0.5em 0;
+    color: rgb(19, 108, 126);
+    font: 1.0em/1.33 	Times , serif;
+
+ }
+  /*colour and font of main_head*/
+ #main_head{
+
+    padding: 0;
+    margin: 0 0 0.5em 0;
+    color: rgb(126, 19, 119);
+    font: 1.5em/1.33 Garamond, serif;
+
+ }
+  /*colour and font of article heading*/
+ #article_h{
+
+    color: rgb(147, 64, 141);
+    font: 2.00em/1.33 Garamond, serif;
+ }
+  /*colour of any paraghaphs */
+ p{
+    color: rgb(64, 147, 132);
+
+ }
+  /*colour and font of paraghaph before the article heading */
+ #p0{
+    color: rgb(64, 78, 147);
+    font: 1.0em/1.33 Helvetica, Sans-serif;
+
+ }
+  /*colour and font of paraghaph after the article heading */
+ #p1{
+
+    color: rgb(64, 78, 147);
+    font: 0.9em/1.33 Helvetica, Sans-serif;
+ }
+ /*colour and font of  article sub heading 1*/
+#sub_h{
+
+    color: rgb(147, 64, 141);
+    font: 1.5em/1.33 Garamond, serif;
+
+}
+ /*colour and font of paraghaph after the article sub heading 1 */
+#p2{
+    color: rgb(64, 78, 147);
+    font: 0.9em/1.33 Helvetica, Sans-serif;
+
+}
+/*colour and font of bullets points in the list */
+#points{
+    color: rgb(64, 78, 147);
+    font: 0.9em/1.33 Helvetica, Sans-serif;
+
+}
+/*colour and font of paraghaph*/
+#p3{
+    color: rgb(64, 78, 147);
+    font: 0.9em/1.33 Helvetica, Sans-serif;
+
+}
+/*colour and font of paraghaph*/
+#p4{
+    color: rgb(64, 78, 147);
+    font: 0.9em/1.33 Helvetica, Sans-serif;
+}
+/*colour and font of paraghaph*/
+#p5{
+    color: rgb(64, 78, 147);
+    font: 0.9em/1.33 Helvetica, Sans-serif;
+}
+/*colour of body */
+body{
+    padding: 25px;
+    background-color:white;
+    color:black;
+    
+}
+
+.dark-mode{
+    background-color: black;
+    color: white;
+}
+
+@media screen {  
+    body {  
+      color: black;  
+      ;background-color: rgb(247, 247, 246);  
+    }  
+  }
+
+
